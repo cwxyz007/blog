@@ -11,6 +11,8 @@ tag: [Blog, Hexo]
 
 安装 [Nodejs](http://nodejs.cn/) 和 [npm](https://www.npmjs.com/)，推荐使用 [nvm](https://github.com/creationix/nvm) 来安装。既然都推荐使用 [nvm](https://github.com/creationix/nvm) 了，那就再推荐一下包管理工具 [Yarn](https://yarnpkg.com/zh-Hans/) 
 
+<!-- more -->
+
 ## 安装 Hexo
 
 如果上面安装好了，那现在就特别简单了。
