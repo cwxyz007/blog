@@ -10,9 +10,9 @@ tags: [Web, Ajax]
 
 AJAX 的核心逻辑代码真心少的可怜～，总结一下，一共就三部分。
 
-1. 创建 `xmlhttp` 对象
-2. 创建 `xmlhttp` 接收到数据之后的回调函数
-3. 发送请求
+1. 创建 `XMLHttpRequest` 对象
+2. 创建 `XMLHttpRequest` 在 `readyState` 发生变化时的回调函数
+3. 使用 `XMLHttpRequest` 发送请求
 
 <!-- more -->
 
@@ -31,8 +31,9 @@ function loadXMLDoc(url, callback) {
     xmlhttp.send();
 }
 
-//处理函数
+// 处理函数
 function callbackTest(xmlhttp) {
+    // 请求成功
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         // do somthing
     }
