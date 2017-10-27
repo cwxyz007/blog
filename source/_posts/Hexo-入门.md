@@ -1,6 +1,6 @@
 ---
 title: Hexo 入门
-tag: [Blog, Hexo]
+tag: [Web, Blog, Hexo]
 ---
 
 就把这篇文章算做自己的第一篇技术文章吧！以后这个博客就拿来记录自己的一些技术心得。
