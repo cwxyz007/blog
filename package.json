@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "test": "hexo s",
-        "debug": "hexo s --debug",
+        "dev": "hexo s --debug",
         "deploy": "hexo g -d"
     },
     "hexo": {
