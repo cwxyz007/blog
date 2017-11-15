@@ -5,7 +5,7 @@
     "scripts": {
         "test": "hexo s",
         "dev": "hexo s --debug",
-        "deploy": "hexo g -d"
+        "deploy": "hexo clean && hexo g -d"
     },
     "hexo": {
         "version": "3.3.9"
