@@ -4,7 +4,6 @@ date: 2017-09-29 09:25:18
 tags: [JavaScript, Coveralls, Travis CI]
 ---
 
-
 这篇文章的目标就是在 GitHub 上显示如下图标。当然不是简单的显示两张图片，而是显示当前项目的一些状态。
 
 {% asset_img icon.png %}

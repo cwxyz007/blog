@@ -1,7 +1,6 @@
 ---
-title: 个人简历
-date: 2017-01-01 17:47:36
-tags:
+title: 关于我
+date: 2017-11-16 08:40:57
 comments: false
 ---
 
@@ -29,6 +28,7 @@ comments: false
 - Git
 - Vue
 - TDD
+- SCSS
 - Linux
 - Sqlite3
 - Electron
@@ -84,3 +84,4 @@ comments: false
 - 使用 Unity 引擎制作过手机 2D 游戏、2D 端游 Demo、3D 端游 Demo、以及音乐软件
 - 参与过安卓软件（记账APP）的页面制作、局域网聊天软件的数据库设计与实现
 - 并在敏捷开发领域有大量练习，熟悉相关技能，包括但不限于 `mocha`、`chai`、`gulp`、`coveralls`、`traiv CI`
+
