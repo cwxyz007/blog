@@ -8,10 +8,10 @@
     "deploy": "hexo clean && hexo g -d"
   },
   "hexo": {
-    "version": "3.4.3"
+    "version": "3.4.4"
   },
   "dependencies": {
-    "hexo": "^3.3.9",
+    "hexo": "^3.4.4",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
