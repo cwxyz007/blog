@@ -1,5 +1,5 @@
 ---
-title: 关于我
+title: 个人简历
 date: 2017-11-16 08:40:57
 comments: false
 ---
@@ -8,9 +8,11 @@ comments: false
 
 在校时间：2014-2018
 
-毕业学校和专业： 成都信息工程大学 | 数字媒体技术
+毕业学校和专业： 成都信息工程大学 | 计算机数字媒体技术专业
 
 成绩排名：前 10%
+
+英语水平：CET 4
 
 主修课程：C\C++、数据结构、HTML5 编程、离散数学、高等数学、经典算法的设计与实现、软件工程、C#程序设计、WEB 编程技术、XML 设计与应用、计算机图形学、计算机网络、移动终端编程（安卓编程）、JAVA 程序设计
 
@@ -18,9 +20,9 @@ comments: false
 
 ## 专业技能
 
-- 精通 : JavaScript(ES6) HTML(5) CSS(3) NodeJS C\C++ C#
-- 熟悉 : Git Vue TDD SCSS Linux Sqlite3 Electron
-- 其它 : Markdown Photoshop
+- 精通 : JavaScript(ES6) HTML(5) CSS(3)
+- 熟悉 : Git React TDD SCSS Sqlite3 Electron Ruby NodeJS C\C++ C#
+- 其它 : Markdown Photoshop Linux Mac
 
 ---
 
@@ -40,6 +42,10 @@ comments: false
 - 通过 CET-4 考试 447 分
 - 参加学校 ThoughtWorks 实验室，担任学习小组成员以及宣传小组成员
 - 参加 ThoughtWorks 结对编程线下比赛，获得四等奖
+
+### 大四
+
+- 西瓜创客 实习(2017/11 - 2018/02)，实习工作主要是前端页面的实现、适配，以及相关于页面的后端逻辑实现。使用 Rails 框架，技术栈 Ruby + Slim + Scss + CoffeeScript
 
 ---
 
@@ -67,14 +73,14 @@ comments: false
 1. [产品介绍模板](https://cwxyz007.github.io/TWPractice/TW103/src/index.html) 使用 Bootstrap 框架和 Material Kit 模板制作的产片介绍网站
 1. [简历模板](https://cwxyz007.github.io/TWPractice/TW105/src/index.html) 使用 Bootstrap 制作的简历模板
 1. [试卷制作](https://cwxyz007.github.io/TWPractice/TW108/index.html) 使用 Bootstrap 制作的试卷，可计算对错和分数
-1. [个人博客](https://cwxyz007.github.io/) 使用 hexo 框架和 next 模板制作的个人博客，主要记录自己的一些心得体会
+1. [个人博客](https://cwxyz007.github.io/) 使用 hexo 框架和 next 模板制作的个人博客
 
 ---
 
 ### 个人评价
 
-- 本人在业余时间自学过简易图形库 EGE 、Git 、 Unity 引擎以及 web 全栈等多种知识
+- 本人在业余时间自学过简易图形库 EGE 、Git 、Unity 引擎以及 web 全栈等多种知识
 - 使用 Unity 引擎制作过手机 2D 游戏、2D 端游 Demo、3D 端游 Demo、以及音乐软件
 - 参与过安卓软件（记账APP）的页面制作、局域网聊天软件的数据库设计与实现
-- 并在敏捷开发领域有大量练习，熟悉相关技能，包括但不限于 `mocha`、`chai`、`gulp`、`coveralls`、`traiv CI`
+- 踏上了去往全栈工程师的道路
 
