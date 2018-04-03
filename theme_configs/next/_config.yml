@@ -6,6 +6,10 @@
 # Useful if you don't want to inherit the theme _config.yml configurations.
 override: false
 
+# Allow to cache content generation. Introduced in NexT v6.0.0.
+cache:
+  enable: true
+
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
@@ -27,7 +31,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Cwxyz,web,前端"
+keywords: "Hexo, NexT"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -40,7 +44,7 @@ footer:
   #since: 2015
 
   # Icon between year and copyright info.
-  icon: heart
+  icon: user
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
@@ -85,26 +89,26 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
+  #about: /about/ || user
+  #tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
-# Enable/Disable menu icons.
-menu_icons:
-  enable: true
-
+# Enable/Disable menu icons / item badges.
+menu_settings:
+  icons: true
+  badges: false
 
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-#scheme: Mist
+# scheme: Muse
+# scheme: Mist
 scheme: Pisces
 #scheme: Gemini
 
@@ -113,14 +117,17 @@ scheme: Pisces
 # Sidebar Settings
 # ---------------------------------------------------------------
 
+# Posts / Categories / Tags in sidebar.
+site_state: true
+
 # Social Links.
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-social:
-  GitHub: https://github.com/cwxyz007  || github
-  E-Mail: mailto:844067636@qq.com || envelope
+#social:
+  #GitHub: https://github.com/yourname || github
+  #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -134,6 +141,12 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
+
+# Follow me on GitHub banner in right-top corner.
+# Usage: `permalink || title`
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the title and aria-label name.
+#github_banner: https://github.com/yourname || Follow me on GitHub
 
 # Blog rolls
 links_icon: link
@@ -166,7 +179,7 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right (only for Pisces | Gemini).
-  #position: left
+  # position: left
   position: right
 
   # Sidebar Display, available value (only for Muse | Mist):
@@ -186,7 +199,7 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button.
-  scrollpercent: true
+  scrollpercent: false
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -197,7 +210,7 @@ sidebar:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: false
+scroll_to_more: true
 
 # Automatically saving scroll position on each post/page in cookies.
 save_scroll: false
@@ -219,13 +232,13 @@ post_meta:
   categories: true
 
 # Post wordcount display settings
-# Dependencies: https://github.com/willin/hexo-wordcount
-post_wordcount:
-  item_text: true
-  wordcount: false
-  min2read: false
-  totalcount: false
+# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
   separated_meta: true
+  item_text_post: true
+  item_text_total: false
+  awl: 5
+  wpm: 200
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -253,7 +266,7 @@ post_copyright:
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: false
 
-# Android Chrome header panel color ($black-deep).
+# Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
 
 # Custom Logo.
@@ -336,9 +349,15 @@ font:
 mathjax:
   enable: false
   per_page: false
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+  # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
+  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
+  #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+  # For automatic detect latest varsion link to MathJax.js and get from CloudFlare.
+  #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
-# Han Support docs: https://hanzi.pro/
+# Han Support
+# Dependencies: https://github.com/theme-next/theme-next-han
 han: false
 
 # Swiftype Search API Key
@@ -347,14 +366,12 @@ han: false
 # Baidu Analytics ID
 #baidu_analytics:
 
-# Duoshuo ShortName
-#duoshuo_shortname:
-
 # Disqus
 disqus:
-  enable: true
-  shortname: https-cwxyz007-github-io
+  enable: false
+  shortname:
   count: true
+  lazyload: false
 
 # Hypercomments
 #hypercomments_id:
@@ -368,14 +385,18 @@ changyan:
 
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
-# more info please open https://github.com/xCss/Valine
+# more info please open https://valine.js.org
 valine:
   enable: false
   appid:  # your leancloud application appid
   appkey:  # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: Comment input placeholder
+  placeholder: Just go go # comment box placeholder
+  avatar: mm # gravatar style
+  guest_info: nick,mail,link # custom comment header
+  pageSize: 10 # pagination size
+
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -394,9 +415,9 @@ gitment:
   lazy: false # Comments lazy loading with a button
   cleanly: false # Hide 'Powered by ...' on footer, and more
   language: # Force language, or auto switch by theme
-  github_user: # MUST HAVE, Your Github ID
-  github_repo: # MUST HAVE, The repo you use to store Gitment comments
-  client_id:   # MUST HAVE, Github client id for the Gitment
+  github_user: # MUST HAVE, Your Github Username
+  github_repo: # MUST HAVE, The name of the repo you use to store Gitment comments
+  client_id: # MUST HAVE, Github client id for the Gitment
   client_secret: # EITHER this or proxy_gateway, Github access secret token for the Gitment
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
@@ -416,11 +437,8 @@ gitment:
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
-# Share
-#duoshuo_share: true
-
 # NeedMoreShare2
-# This plugin is a pure javascript sharing lib which is useful in China.
+# Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
 # See: https://github.com/revir/need-more-share2
 # Also see: https://github.com/DzmVasileusky/needShareButton
 # iconStyle: default | box
@@ -432,14 +450,14 @@ gitment:
 #           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
   enable: false
-  postbottom: 
+  postbottom:
     enable: false
     options:
       iconStyle: box
       boxForm: horizontal
       position: bottomCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
-  float: 
+  float:
     enable: false
     options:
       iconStyle: box
@@ -468,15 +486,6 @@ needmoreshare2:
 # Application Insights
 # See https://azure.microsoft.com/en-us/services/application-insights/
 # application_insights:
-
-# Make duoshuo show UA
-# user_id must NOT be null when admin_enable is true!
-# you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
 
 # Post widgets & FB/VK comments settings.
 # ---------------------------------------------------------------
@@ -521,6 +530,16 @@ leancloud_visitors:
   enable: false
   app_id: #<app_id>
   app_key: #<app_key>
+
+# Another tool to show number of visitors to each article.
+# visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
+# visit https://firebase.google.com/docs/firestore/ to get more information about firestore
+firestore:
+  enable: false
+  collection: articles #required, a string collection name to access firestore database
+  apiKey: #required
+  projectId: #required
+  bluebird: false #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -569,6 +588,7 @@ calendar:
   maxResults: 250
 
 # Algolia Search
+# Dependencies: https://github.com/theme-next/theme-next-algolia-instant-search
 algolia_search:
   enable: false
   hits:
@@ -579,9 +599,9 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
-# Dependencies: https://github.com/flashlab/hexo-generator-search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: true
+  enable: false
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -623,6 +643,13 @@ tabs:
     labels: true
   border_radius: 0
 
+# Reading progress bar
+# Dependencies: https://github.com/theme-next/theme-next-reading-progress
+reading_progress:
+  enable: false
+  color: "#37c6c0"
+  height: 2px
+
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -648,11 +675,23 @@ motion:
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 
-# Fancybox
-fancybox: true
+# Fancybox. There is support for old version 2 and new version 3.
+# Please, choose only any one variant, do not need to install both.
+# For install 2.x: https://github.com/theme-next/theme-next-fancybox
+# For install 3.x: https://github.com/theme-next/theme-next-fancybox3
+fancybox: false
+
+# Added switch option for separated repo in 6.0.0.
+# Dependencies: https://github.com/theme-next/theme-next-fastclick
+fastclick: false
+
+# Added switch option for separated repo in 6.0.0.
+# Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
+lazyload: false
 
 # Progress bar in the top during page loading.
-pace: true
+# Dependencies: https://github.com/theme-next/theme-next-pace
+pace: false
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -672,18 +711,20 @@ pace: true
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: true
+# Dependencies: https://github.com/theme-next/theme-next-canvas-nest
+canvas_nest: false
 
+# JavaScript 3D library.
+# Dependencies: https://github.com/theme-next/theme-next-three
 # three_waves
 three_waves: false
-
 # canvas_lines
 canvas_lines: false
-
 # canvas_sphere
 canvas_sphere: false
 
 # Only fit scheme Pisces
+# Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # Canvas-ribbon
 # size: The width of the ribbon.
 # alpha: The transparency of the ribbon.
@@ -787,4 +828,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.3
+version: 6.0.1

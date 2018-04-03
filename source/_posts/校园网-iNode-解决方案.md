@@ -1,7 +1,7 @@
 ---
 title: Linux 下 iNode 解决方案
 date: 2017-09-19 09:04:54
-tags: [iNode, linux]
+tags: [iNode, Linux]
 ---
 
 由于学校的 iNode 客户端 Linux 版太古老了，安装起来遇到各种各样的问题。所以就在

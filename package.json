@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "test": "hexo s",
+    "new": "hexo new",
     "dev": "hexo s --debug",
     "deploy": "hexo clean && hexo g -d"
   },
   "hexo": {
-    "version": "3.4.4"
+    "version": "3.7.0"
   },
   "dependencies": {
     "hexo": ">=3.4.4",
@@ -18,11 +19,6 @@
     "hexo-generator-index": ">=0.2.0",
     "hexo-generator-searchdb": ">=1.0.8",
     "hexo-generator-tag": ">=0.2.0",
-    "hexo-render-pug": ">=1.2.0",
-    "hexo-renderer-ejs": ">=0.3.0",
-    "hexo-renderer-marked": ">=0.3.0",
-    "hexo-renderer-sass": ">=0.3.2",
-    "hexo-renderer-stylus": ">=0.3.1",
     "hexo-server": ">=0.2.0"
   }
 }
