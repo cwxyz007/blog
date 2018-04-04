@@ -1,6 +1,6 @@
 ---
 title: 个人简历
-date: 2017-11-16 08:40:57
+date: 2018-4-4 20:56:27
 comments: false
 ---
 
@@ -12,7 +12,7 @@ comments: false
 
 成绩排名：前 10%
 
-英语水平：CET 4
+英语水平：`CET 4`
 
 主修课程：C\C++、数据结构、HTML5 编程、离散数学、高等数学、经典算法的设计与实现、软件工程、C#程序设计、WEB 编程技术、XML 设计与应用、计算机图形学、计算机网络、移动终端编程（安卓编程）、JAVA 程序设计
 
@@ -20,9 +20,9 @@ comments: false
 
 ## 专业技能
 
-- 精通 : JavaScript(ES6) HTML(5) CSS(3)
-- 熟悉 : Git React TDD SCSS Sqlite3 Electron Ruby NodeJS C\C++ C#
-- 其它 : Markdown Photoshop Linux Mac
+- 精通 : `JavaScript(ES6)` `HTML(5)` `CSS(3)`
+- 熟悉 : `Git` `React` `TDD` `SCSS` `Sqlite3` `Electron` `NodeJS`
+- 其它 : `Markdown` `Photoshop` `Linux/Mac` `C\C++` `C#` `Ruby` 
 
 ---
 
@@ -45,7 +45,7 @@ comments: false
 
 ### 大四
 
-- 西瓜创客 实习(2017/11 - 2018/02)，实习工作主要是前端页面的实现、适配，以及相关于页面的后端逻辑实现。使用 Rails 框架，技术栈 Ruby + Slim + Scss + CoffeeScript
+- 西瓜创客 实习(2017/11 - 2018/02)，实习工作主要是前端页面的实现、适配，以及相关于页面的后端逻辑实现。使用 `Rails` 框架，技术栈 `Ruby + Slim + Scss + CoffeeScript`
 
 ---
 
@@ -53,27 +53,22 @@ comments: false
 
 ### 仅本地代码
 
-1. [俄罗斯方块]() 使用 C++ 和 EGE 图形库制作的俄罗斯方块，实现基本玩法和排行榜功能
-1. [迷宫]() 使用 C++ 和 EGE 图形库制作的迷宫小游戏，可收集人物，拥有一个完成的小故事，获得院级比赛——硕果杯比赛，三等奖
-1. [Unity 手游]() 使用 Unity 引擎制作的手游《没有退路》
-1. [局域网聊天软件]() 我主要负责 MySQL 数据库的设计和实现
+1. [俄罗斯方块]() 使用 `C++` 和 `EGE` 图形库制作的俄罗斯方块，实现基本玩法和排行榜功能
+1. [迷宫]() 使用 `C++` 和 `EGE` 图形库制作的迷宫小游戏，可收集人物，拥有一个完成的小故事，获得院级比赛——硕果杯比赛，三等奖
+1. [Unity 手游]() 使用 `Unity` 引擎制作的手游《没有退路》
+1. [局域网聊天软件]() 我主要负责 `MySQL` 数据库的设计和实现
 
 ### 可在 Github 在线查看
 
-1. [Unity 音乐播放器](https://github.com/cwxyz007/MusicPlayer) 使用 Unity 引擎制作的音乐播放器
-1. [算法练习](https://github.com/cwxyz007/Algorithm) 使用 C# 练习常用排序算法以及二叉排序树算法
+1. [Unity 音乐播放器](https://github.com/cwxyz007/MusicPlayer) 使用 `Unity` 引擎制作的音乐播放器
+1. [算法练习](https://github.com/cwxyz007/Algorithm) 使用 `C#` 练习常用排序算法以及二叉排序树算法
+1. [electron-pm](https://github.com/cwxyz007/electron-PM) 使用 `Electron + SCSS + React + Sqlite3` 制作的图片管理器
 
 ### 可在线预览
 
-1. [2048 小游戏](https://cwxyz007.github.io/pixi2048/) 使用 pixi.js 库和 hammer.js 库实现的 2048 小游戏
-1. vue 练习 : 使用 vue 框架做的练习
-	1. [网格组件](https://cwxyz007.github.io/vue-practice/grid/index.html)
-	1. [树形视图](https://cwxyz007.github.io/vue-practice/tree/index.html)
-	1. [SVG 图表](https://cwxyz007.github.io/vue-practice/svg-test/index.html)
-1. [产品介绍模板](https://cwxyz007.github.io/TWPractice/TW103/src/index.html) 使用 Bootstrap 框架和 Material Kit 模板制作的产片介绍网站
-1. [简历模板](https://cwxyz007.github.io/TWPractice/TW105/src/index.html) 使用 Bootstrap 制作的简历模板
-1. [试卷制作](https://cwxyz007.github.io/TWPractice/TW108/index.html) 使用 Bootstrap 制作的试卷，可计算对错和分数
-1. [个人博客](https://cwxyz007.github.io/) 使用 hexo 框架和 next 模板制作的个人博客
+1. [2048 小游戏](https://cwxyz007.github.io/pixi2048/) 使用 `pixi.js` 库和 `hammer.js` 库实现的 2048 小游戏
+1. [个人博客](https://cwxyz007.github.io/) 使用 `hexo` 框架和 `simple` 模板主题制作的个人博客
+1. [hexo-simple-template](https://github.com/cwxyz007/hexo-simple-template) 个人博客的主题 `simple` ，使用 `pug + scss` 制作
 
 ---
 
