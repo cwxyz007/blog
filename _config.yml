@@ -72,17 +72,10 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: simple
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: https://github.com/cwxyz007/cwxyz007.github.io.git
-
-# Other Setting
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
