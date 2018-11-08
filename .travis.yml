@@ -22,12 +22,12 @@ script:
 after_script:
   - cd ./public
   - git add .
-  - git commit -m "Site updated: `date '+%Y-%m-%d %H:%M:%S'`"
+  - git commit -m "Site updated - `date '+%Y-%m-%d %H:%M:%S'`"
   - git push "https://${GitToken}@${GitRepo}" master:master
 
 branches:
   only:
-    - release
+    - master
 
 cache:
   yarn: true
