@@ -7,8 +7,6 @@ before_install:
 
 install:
   - yarn
-  - git submodule init
-  - git submodule update
 
 before_script:
   - mkdir ./public

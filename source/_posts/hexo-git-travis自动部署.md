@@ -16,7 +16,6 @@ tags: [Hexo, Git, TravisCI]
 2. travis 执行脚本
    1. 安装依赖 `npm install` or `yarn`
    2. 配置 git global config
-   3. 更新 git submodule
       <!-- more -->
    4. clone git page 仓库
    5. 生成 html 静态文件
@@ -53,10 +52,8 @@ before_install: # 配置 git global config
   - git config user.name "cwxyz007"
   - git config user.email "jie844067636@gmail.com"
 
-install: # 安装依赖 以及 更新 submodule
+install: # 安装依赖
   - yarn
-  - git submodule init
-  - git submodule update
 
 before_script: # clone git page 仓库到 public 文件夹
   - mkdir ./public
