@@ -33,4 +33,5 @@ cache:
 
 env:
   global:
+    - TZ: Asia/Shanghai
     - GitRepo: github.com/cwxyz007/cwxyz007.github.io.git

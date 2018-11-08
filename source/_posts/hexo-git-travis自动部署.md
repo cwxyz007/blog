@@ -82,6 +82,7 @@ cache: # 缓存 node_module 加快更新速度
 
 env: #环境变量
   global:
+    - TZ: Asia/Shanghai
     - GitRepo: github.com/cwxyz007/cwxyz007.github.io.git
 ```
 
