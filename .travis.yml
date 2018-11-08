@@ -22,8 +22,7 @@ script:
 after_script:
   - cd ./public
   - git add .
-  - export timestamp=$(date "+%Y-%m-%d %H:%M:%S")
-  - git commit -m "Site updated: ${timestamp}"
+  - git commit -m "Site updated: `date '+%Y-%m-%d %H:%M:%S'`"
   - git push "https://${GitToken}@${GitRepo}" master:master
 
 branches:
@@ -32,6 +31,7 @@ branches:
 
 cache:
   yarn: true
+  npm: true
 
 env:
   global:
