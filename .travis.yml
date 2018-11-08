@@ -13,7 +13,7 @@ install:
 before_script:
   - mkdir ./public
   - cd ./public
-  - git clone "https://{GitRepo}" .
+  - git clone "https://${GitRepo}" .
   - cd ..
 
 script:
