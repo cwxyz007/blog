@@ -22,7 +22,8 @@ script:
 after_script:
   - cd ./public
   - git add .
-  - git commit -m "Site update"
+  - export timestamp=$(date "+%Y-%m-%d %H:%M:%S")
+  - git commit -m "Site updated: ${timestamp}"
   - git push "https://${GitToken}@${GitRepo}" master:master
 
 branches:
