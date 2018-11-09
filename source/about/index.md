@@ -21,8 +21,8 @@ comments: false
 ## 专业技能
 
 - 精通 : `JavaScript(ES6)` `HTML(5)` `CSS(3)`
-- 熟悉 : `Git` `React` `SCSS` `Sqlite3` `Electron` `NodeJS` `Gulp` `Webpack` `Mocha` `Chai`
-- 其它 : `Markdown` `Sketch` `Photoshop` `Linux/Mac` `C\C++` `C#` `Ruby` `Vim`
+- 熟悉 : `Git` `Vue+Router+Vuex` `Less` `Sqlite3` `Electron` `NodeJS` `Gulp` `Webpack` `Mocha` `Chai`
+- 其它 : `Markdown` `Sketch` `Photoshop` `Linux/Mac` `Python` `Vim`
 
 ---
 
@@ -30,16 +30,11 @@ comments: false
 
 - 西瓜创客 实习(2017/11 - 2018/02)，实习工作主要是前端页面的实现、适配，以及简单的后端逻辑实现。使用 `Rails` 框架，技术栈 `Ruby + Slim + Scss + CoffeeScript`
 
+- 青蛙创客(2018/07 - 至今)，使用 `Vue` 全家桶，前端全职工作
+
 ---
 
 ## 作品介绍
-
-### 未开源作品
-
-1. [俄罗斯方块]() 使用 `C++` 和 `EGE` 图形库制作的俄罗斯方块，实现基本玩法和排行榜功能
-1. [迷宫]() 使用 `C++` 和 `EGE` 图形库制作的迷宫小游戏，可收集人物，拥有一个完整的小故事，获得学校院级比赛三等奖
-1. [Unity 手游]() 使用 `Unity` 引擎制作的手游《没有退路》
-1. [局域网聊天软件]() 我主要负责 `MySQL` 数据库的设计和实现
 
 ### Github 开源作品
 
