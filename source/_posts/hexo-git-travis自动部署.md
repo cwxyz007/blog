@@ -1,7 +1,7 @@
 ---
 title: hexo+git+travis自动部署
 date: 2018-11-08 13:41:11
-tags: [Hexo, Git, TravisCI]
+tags: [Hexo, Git, Travis CI]
 ---
 
 > 本文介绍如何使用 TravisCI 来实现 `git push` 之后，自动更新 GitHub Page
