@@ -88,11 +88,12 @@ env: #环境变量
 
 ## 坑
 
-在配置 `git commit` 命令的时候，错误的配置为
+在配置 `git commit` 命令的时候，配置为
 
 ```yaml
 script:
-  - git commit "Site updated: `date '+%Y-%m-%d %H:%M:%S'`"
+  - git commit -m "Site updated - `date '+%Y-%m-%d %H:%M:%S'`" # 正确
+  - git commit -m "Site updated: `date '+%Y-%m-%d %H:%M:%S'`" # 错误
 ```
 
-提交上去之后，Travis 提示 command not found，通过查找，发现是 yaml 语法错误，因为 `:` 没有转义，所以整句命令执行出错，谨记！
+提交上去之后，Travis 提示 command not found，通过查找，发现是 yaml 语法错误，因为 `Site updated` 后面的 `:` 没有转义，所以整句命令执行出错，谨记！

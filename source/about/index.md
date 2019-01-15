@@ -1,6 +1,6 @@
 ---
 title: 个人简历
-date: 2018-4-4 20:56:27
+date: 2019-1-15 23:51:10
 comments: false
 ---
 
@@ -12,7 +12,7 @@ comments: false
 
 成绩排名：前 10%
 
-英语水平：`CET 4`
+英语水平：`CET 4` ( PS: **可无障碍浏览英文文档** )
 
 主修课程：C\C++、数据结构、HTML5 编程、离散数学、高等数学、经典算法的设计与实现、软件工程、C#程序设计、WEB 编程技术、XML 设计与应用、计算机图形学、计算机网络、移动终端编程（安卓编程）、JAVA 程序设计
 
@@ -20,9 +20,9 @@ comments: false
 
 ## 专业技能
 
-- 精通 : `JavaScript(ES6)` `HTML(5)` `CSS(3)`
-- 熟悉 : `Git` `Vue+Router+Vuex` `Less` `Sqlite3` `Electron` `NodeJS` `Gulp` `Webpack` `Mocha` `Chai`
-- 其它 : `Markdown` `Sketch` `Photoshop` `Linux/Mac` `Python` `Vim`
+- 精通 : `JavaScript(ES6/7)` `HTML(5)` `CSS(3)` `TypeScript` `Vue+Router+Vuex`
+- 熟悉 : `Git` `Less/Sass/Scss` `NodeJS` `Webpack` `Mocha+Chai` `Electron`
+- 其它 : `Markdown` `Sketch` `Photoshop` `Linux/Mac` `Python` `Vim` `Adobe XD` `Mongoose` `Sqlite`
 
 ---
 
@@ -38,19 +38,22 @@ comments: false
 
 ### Github 开源作品
 
-1. [Unity 音乐播放器](https://github.com/cwxyz007/MusicPlayer) 使用 `Unity` 引擎制作的音乐播放器
-1. [算法练习](https://github.com/cwxyz007/Algorithm) 使用 `C#` 练习常用排序算法以及二叉排序树算法
-1. [electron-pm](https://github.com/cwxyz007/electron-PM) 使用 `Electron + SCSS + React + Sqlite3` 制作的图片管理器
-1. [hexo-simple-template](https://github.com/cwxyz007/hexo-simple-template) 个人博客的主题 `simple` ，使用 `pug + scss` 制作
-1. [extract-img-color](https://github.com/cwxyz007/extract-img-color) 提取图片色板，算法为 [中位切割演算法](https://www.wikiwand.com/zh-hans/%E4%B8%AD%E4%BD%8D%E5%88%87%E5%89%B2%E6%BC%94%E7%AE%97%E6%B3%95)
+1. [hexo-theme-simple] `Hexo` 博客主题，也是 [本人博客] 的主题 `simple` ，技术：`Pug + Scss + JavaScript`
+1. [img-color-palette] 提取图片色板，算法为 [中位切割演算法]，技术：`TypeScript + Webpack`
+1. [vscode-hexo-utils] `visual studio code` 插件，为 `Hexo` 博客项目写文章提供便利，技术：`TypeScript`
 
 ### 在线作品
 
-1. [2048 小游戏](https://cwxyz007.github.io/pixi2048/) 使用 `pixi.js` 库和 `hammer.js` 库实现的 2048 小游戏
-1. [个人博客](https://cwxyz007.github.io/) 使用 `hexo` 框架和 `simple` 模板主题制作的个人博客
+1. [本人博客] 主要记录技术心得，偶尔写写杂记
 
 ---
 
 ### 个人评价
 
 本人在业余时间自学了 `Git` `React` `Unity` 引擎 以及 `NodeJS` 等多种知识，期望在未来成为全栈工程师。
+
+[本人博客]: https://cwxyz007.github.io/
+[hexo-theme-simple]: https://github.com/cwxyz007/hexo-theme-simple
+[img-color-palette]: https://github.com/cwxyz007/img-color-palette
+[vscode-hexo-utils]: https://github.com/cwxyz007/vscode-hexo-utils
+[中位切割演算法]: https://www.wikiwand.com/zh-hans/%E4%B8%AD%E4%BD%8D%E5%88%87%E5%89%B2%E6%BC%94%E7%AE%97%E6%B3%95
