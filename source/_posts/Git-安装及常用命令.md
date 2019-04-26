@@ -2,6 +2,7 @@
 title: Git 安装及常用命令
 date: 2017-04-17 09:45:21
 tags: [Git]
+license: CC BY-NC 4.0
 ---
 
 > git 是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于 2005 年以 GPL 发布。最初目的是为更好地管理 Linux 内核开发而设计。

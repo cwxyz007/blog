@@ -2,6 +2,7 @@
 title: AJAX 基础
 date: 2017-10-27 21:08:27
 tags: [Ajax]
+license: CC BY-NC 4.0
 ---
 
 > 一种在无需重新加载整个网页的情况下，能够更新部分网页的技术

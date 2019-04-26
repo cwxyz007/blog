@@ -2,6 +2,7 @@
 title: Node 项目配置最佳实践
 date: 2018-04-03 13:13:42
 tags: [Nodejs, JavaScript]
+license: CC BY-NC 4.0
 ---
 
 ## 引文

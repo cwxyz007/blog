@@ -2,6 +2,7 @@
 title: Ubuntu 装机清单
 date: 2017-09-23 09:00:49
 tags: [Linux, Ubuntu]
+license: CC BY-NC 4.0
 ---
 
 第一步：更新驱动
