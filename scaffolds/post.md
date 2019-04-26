@@ -2,6 +2,6 @@
 title: {{ title }}
 date: {{ date }}
 tags: []
-# CC BY-NC
+# CC BY-NC 4.0
 license: 
 ---
