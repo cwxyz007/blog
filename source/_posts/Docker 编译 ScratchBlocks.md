@@ -17,7 +17,9 @@ license: CC BY-NC 4.0
 
 既然是 Docker， 那第一步肯定是写 Dockerfile 和 Dockerignore 了，Dockerignore 根据项目写就完了，语法和 gitignore 一样
 
-需要注意的是缓存 node_modules，所以在执行 build 之前需要先单独复制 yarn.lock 文件执行 `yarn install --ignore-scripts`
+<!-- more -->
+
+需要注意的是，要缓存 node_modules，所以在执行 build 命令之前需要先单独复制 yarn.lock 文件，然后执行 `yarn install --ignore-scripts` 达到缓存 node_modules 的目的
 
 这是因为 `RUN, COPY, ADD` 指令每次都会创建中间容器（缓存用），这样每次 yarn.lock 改变才会执行 `yarn install` 命令，
 这样也就达到了缓存 node_modules 的目的
@@ -28,7 +30,7 @@ FROM alpine
 
 WORKDIR /app
 
-# install curl python java
+# install nodejs python java
 RUN apk update && apk add python nodejs yarn openjdk8
 
 # cache node_modules accord by yarn.lock
