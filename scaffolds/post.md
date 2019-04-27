@@ -3,5 +3,5 @@ title: {{ title }}
 date: {{ date }}
 tags: []
 # CC BY-NC 4.0
-license: 
+license: CC BY-NC 4.0
 ---
