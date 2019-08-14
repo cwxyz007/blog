@@ -17,6 +17,8 @@ license: CC BY-NC 4.0
 
 服务器，博主用的 Debian 10，其它类型服务器大同小异
 
+<!-- more -->
+
 ## 域名申请
 
 请自行 Google，不做讲解，假设申请的域名是 `test.v2ray.cn`
