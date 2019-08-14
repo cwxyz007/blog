@@ -29,8 +29,7 @@ license: CC BY-NC 4.0
 
 然后在 DNS 里面配置服务器地址
 
-**这里注意一下** Crypto 里面的配置，由于 Cloudflare 自带 SSL 服务，默认会选择 `Flexible` 方案，这可能会[导致无限重定向的问题](https://support.cloudflare.com/hc/en-us/articles/115000219871)。
-所以这里需要改成 `Full(strict)` 方案
+**这里注意一下** Crypto 里面的配置，由于 Cloudflare 自带 SSL 服务，默认会选择 `Flexible` 方案，这可能会 [导致无限重定向的问题](https://support.cloudflare.com/hc/en-us/articles/115000219871)。所以这里需要改成 `Full(strict)` 方案
 
 然后在对应的域名服务商那里配上 Cloudflare 的域名服务器(nameservers)
 
