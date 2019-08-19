@@ -21,8 +21,9 @@ license: CC BY-NC 4.0
 
 需要注意的是，要缓存 node_modules，所以在执行 build 命令之前需要先单独复制 yarn.lock 文件，然后执行 `yarn install --ignore-scripts` 达到缓存 node_modules 的目的
 
-这是因为 `RUN, COPY, ADD` 指令每次都会创建中间容器（缓存用），这样每次 yarn.lock 改变才会执行 `yarn install` 命令，
-这样也就达到了缓存 node_modules 的目的
+这是因为 `RUN, COPY, ADD` 指令每次都会创建中间容器（缓存用），这样每次 yarn.lock 改变才会执行 `yarn install` 命令，这样也就达到了缓存 node_modules 的目的
+
+有时候可能还需要 `package.json` 文件，这里也加上
 
 ```Dockerfile
 # linux core, only 5M
@@ -35,6 +36,7 @@ RUN apk update && apk add python nodejs yarn openjdk8
 
 # cache node_modules accord by yarn.lock
 COPY yarn.lock /app
+COPY package.json /app
 RUN yarn install --ignore-scripts
 
 COPY . /app
