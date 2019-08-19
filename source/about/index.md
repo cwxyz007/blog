@@ -20,9 +20,9 @@ comments: false
 
 ## 专业技能
 
-- 精通 : `JavaScript(ES6/7)` `HTML(5)` `CSS(3)` `TypeScript` `Vue+Router+Vuex`
+- 精通 : `JavaScript(ES6/7/8)` `HTML(5)` `CSS(3)` `TypeScript` `Vue+Router+Vuex`
 - 熟悉 : `Git` `Less/Sass/Scss` `NodeJS` `Webpack` `Mocha+Chai` `Electron`
-- 其它 : `Markdown` `Sketch` `Photoshop` `Linux/Mac` `Python` `Vim` `Adobe XD` `Mongoose` `Sqlite`
+- 了解 : `Markdown` `Sketch` `Photoshop` `Linux/Mac` `Python` `Vim` `Adobe XD` `Mongoose` `SQL`
 
 ---
 
@@ -30,7 +30,7 @@ comments: false
 
 - 西瓜创客 实习(2017/11 - 2018/02)，实习工作主要是前端页面的实现、适配，以及简单的后端逻辑实现。使用 `Rails` 框架，技术栈 `Ruby + Slim + Scss + CoffeeScript`
 
-- 青蛙创客(2018/07 - 至今)，使用 `Vue` 全家桶，前端全职工作
+- 青蛙创客(2018/07 - 至今)，使用 `Vue` 全家桶，前端全职工作。工作内容主要包括 微前端，Scratch-Blocks，Scratch-GUI
 
 ---
 
@@ -50,7 +50,7 @@ comments: false
 
 ### 个人评价
 
-本人在业余时间自学了 `Git` `React` `Unity` 引擎 以及 `NodeJS` 等多种知识，期望在未来成为全栈工程师。
+本人在业余时间自学了 `Git` `React` 以及 `NodeJS` 等多种知识，期望在未来成为全栈工程师。
 
 [本人博客]: https://cwxyz007.github.io/
 [hexo-theme-simple]: https://github.com/cwxyz007/hexo-theme-simple
