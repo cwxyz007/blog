@@ -22,7 +22,7 @@ comments: false
 
 - 精通 : `JavaScript(ES6/7/8)` `HTML(5)` `CSS(3)` `TypeScript` `Vue+Router+Vuex`
 - 熟悉 : `Git` `Less/Sass/Scss` `NodeJS` `Webpack` `Mocha+Chai` `Electron`
-- 了解 : `Markdown` `Sketch` `Photoshop` `Linux/Mac` `Python` `Vim` `Adobe XD` `Mongoose` `SQL`
+- 了解 : `Markdown` `Sketch/Photoshop` `Linux/Mac` `Python` `Vim` `Mongoose` `SQL`
 
 ---
 
