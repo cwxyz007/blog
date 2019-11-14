@@ -20,7 +20,7 @@ comments: false
 
 - 精通 : `JavaScript(ES6/7/8)` `HTML(5)` `CSS(3)` `TypeScript` `Vue+Router+Vuex`
 - 熟悉 : `Git` `Less/Sass/Scss` `NodeJS` `Webpack` `Mocha+Chai` `Electron`
-- 了解 : `Markdown` `Sketch/Photoshop` `Linux/Mac` `Python` `Vim` `Mongoose` `SQL` `Nginx`
+- 了解 : `Markdown` `Sketch/Photoshop` `Linux/Mac` `Python` `Vim` `Mongoose` `SQL` `Nginx` `Docker`
 
 ---
 
@@ -30,9 +30,9 @@ comments: false
 
 - 青蛙创客(2018/07 - 至今)，使用 `Vue` 全家桶，公司前端负责人。工作内容主要包括：小程序，前端项目（伪微前端），Scratch-Blocks，Scratch-GUI
 
-  > 小程序方面使用自研的数据绑定库 [wechat-mp]。其中使用微任务批量更新数据，以减少使用 setData 的次数。还支持类似于 vue 的 watch 和 computed。
+  > 小程序方面使用自研的数据绑定库 [wechat-mp]。其中使用微任务批量更新数据，以减少使用 setData 的次数。还支持类似于 `Vue` 的 watch 和 computed。
   >
-  > 公司项目为了快速迭代，使用了模块化部署。前端也对应改成使用 vue 组件的形式发布，也算一个伪微服务。
+  > 公司项目为了快速迭代，使用了模块化部署。前端也对应改成使用 `Vue` 组件的形式发布，也算一个伪微服务。
 
 ---
 
