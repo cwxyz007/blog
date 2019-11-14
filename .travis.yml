@@ -13,7 +13,7 @@ before_script:
   - mkdir ./public
   - cd ./public
   - git clone "https://${GitRepo}" .
-  - git rm *
+  - git rm * -rf
   - cd ..
 
 script:
