@@ -22,9 +22,9 @@ Github: https://github.com/cwxyz007
 
 ## 专业技能
 
-- 精通 : `JavaScript(ES6/7/8)` `HTML(5)` `CSS(3)` `TypeScript` `Vue+Router+Vuex`
-- 熟悉 : `Git` `Less/Sass/Scss` `NodeJS` `Webpack` `Mocha+Chai` `Electron`
-- 了解 : `Markdown` `Sketch/Photoshop` `Linux/Mac` `Python` `Vim` `Mongoose` `SQL` `Nginx` `Docker`
+- 精通: `JavaScript(ES6/7/8)` `HTML(5)` `CSS(3)` `TypeScript` `Vue+Router+Vuex`
+- 熟悉: `Git` `Less/Sass/Scss` `NodeJS` `Webpack` `Mocha+Chai` `Electron`
+- 了解: `Markdown` `Sketch/Photoshop` `Linux/Mac` `Python` `Vim` `Mongoose` `SQL` `Nginx` `Docker`
 
 ---
 
@@ -36,7 +36,7 @@ Github: https://github.com/cwxyz007
 
   > 小程序方面使用自研的数据绑定库 [wechat-mp]。其中使用微任务批量更新数据，以减少使用 setData 的次数。还支持类似于 `Vue` 的 watch 和 computed。
   >
-  > 公司项目为了快速迭代，使用了模块化部署。前端也对应改成使用 `Vue` 组件的形式发布，也算一个伪微服务。
+  > web 前端方面，公司项目为了快速迭代，使用了模块化部署。前端也对应改成使用 `Vue` 组件的形式发布，也算一个伪微服务。
 
 ---
 
@@ -44,9 +44,9 @@ Github: https://github.com/cwxyz007
 
 ### Github 开源作品
 
-1. [hexo-theme-simple] `Hexo` 博客主题，也是 [本人博客] 的主题 `simple` ，技术：`Pug + Scss + JavaScript`
-2. [img-color-palette] 提取图片色板，算法为 [中位切割演算法]，技术：`TypeScript + Webpack`
-3. [vscode-hexo-utils] `visual studio code` 插件，为 `Hexo` 博客项目写文章提供便利，技术：`TypeScript`
+1. [hexo-theme-simple]: `Hexo` 博客主题，也是 [本人博客] 的主题 `simple` ，技术：`Pug + Scss + JavaScript`
+2. [img-color-palette]: 提取图片色板，算法为 [中位切割演算法]，技术：`TypeScript + Webpack`
+3. [vscode-hexo-utils]: `visual studio code` 插件，为 `Hexo` 博客项目写文章提供便利，技术：`TypeScript`
 
 [本人博客]: https://cwxyz007.github.io/
 [hexo-theme-simple]: https://github.com/cwxyz007/hexo-theme-simple
