@@ -6,13 +6,15 @@ comments: false
 
 ## 基本信息
 
-在校时间：2014-2018
+姓名：王杰
 
-毕业学校和专业： 成都信息工程大学 | 计算机数字媒体技术专业
+出生日期：1996.08.10
 
 邮箱：[x.li.gem@gmail.com](mailto:x.li.gem@gmail.com)
 
 Github: https://github.com/cwxyz007
+
+毕业学校和专业： 成都信息工程大学 | 计算机数字媒体技术专业（2014-2018）
 
 英语水平：`CET 4` ( PS: **可无障碍浏览英文文档** )
 
