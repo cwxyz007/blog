@@ -14,6 +14,8 @@ license: CC BY-NC 4.0
 - Cloudflare 账号
 - Github Pages 设置
 
+<!-- more -->
+
 ## 相关配置
 
 就拿本域名来举例子，`xligem.ml`，对应原来的 Github Pages `cwxyz007.github.io`
