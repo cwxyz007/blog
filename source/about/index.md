@@ -24,8 +24,8 @@ Github: https://github.com/cwxyz007
 
 ## 专业技能
 
-- 精通: `JavaScript(ES6/7/8)` `HTML(5)` `CSS(3)` `TypeScript` `Vue`, `Vue-Router`, `Vuex`
-- 熟悉: `Git` `Less/Sass/Scss` `NodeJS` `Webpack` `Electron` `e2e/unit test`
+- 精通: `JavaScript(es-next)` `HTML(5)` `CSS(3)` `TypeScript` `Vue`, `Vue-Router`, `Vuex`
+- 熟悉: `Git` `React` `Less/Sass/Scss` `NodeJS` `Webpack/Rollup` `Electron` `e2e/unit test`
 - 了解: `Linux/Unix` `Python` `Mongoose` `SQL` `Nginx` `Docker`
 
 ---
@@ -48,11 +48,9 @@ Github: https://github.com/cwxyz007
 
 小程序：使用自研的数据绑定库 [wechat-mp]。其中使用微任务批量更新数据，以减少使用 setData 的次数。还支持类似于 `Vue` 的 watch 和 computed
 
-前端项目：为了快速迭代，以及考虑开发的成本，使用 **微前端** 的开发模式。自研多个内部开发、发布工具
+前端项目：为了快速迭代，以及考虑开发的成本，使用 **微前端** 的开发模式。自研多个内部开发、发布工具。技术亮点：支付接入、组件式开发、权限管理、`mqtt`、`websocket`
 
-技术亮点：支付接入、组件式开发、权限管理、`mqtt`、`websocket`
-
-Scratch：Scratch-GUI(`React` 技术栈)、Scratch-Blocks、Scratch-vm 均有研究和二次开发
+Scratch：Scratch-GUI (`React` 技术栈)、Scratch-Blocks、Scratch-vm 均有研究和二次开发
 
 ---
 
