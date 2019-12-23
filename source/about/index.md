@@ -8,7 +8,7 @@ comments: false
 
 姓名：王杰
 
-出生日期：1996.08.10
+性别：男
 
 邮箱：[x.li.gem@gmail.com](mailto:x.li.gem@gmail.com)
 
@@ -24,8 +24,8 @@ Github: https://github.com/cwxyz007
 
 ## 专业技能
 
-- 精通: `JavaScript(es-next)` `HTML(5)` `CSS(3)` `TypeScript` `Vue`, `Vue-Router`, `Vuex`
-- 熟悉: `Git` `React` `Less/Sass/Scss` `NodeJS` `Webpack/Rollup` `Electron` `e2e/unit test`
+- 精通: `JavaScript(es-next)` `HTML(5)` `CSS(3)` `TypeScript` `Vue` `Vue-Router` `Vuex`
+- 熟悉: `Git` `React` `Less/Sass/Scss` `NodeJS` `Webpack/Rollup` `Electron` `e2e/unit test` `GraphQL`
 - 了解: `Linux/Unix` `Python` `Mongoose` `SQL` `Nginx` `Docker`
 
 ---
