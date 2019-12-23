@@ -14,7 +14,7 @@ comments: false
 
 Github: https://github.com/cwxyz007
 
-Blog: https://xligem.ml
+博客: https://xligem.ml
 
 毕业学校和专业： 成都信息工程大学 | 计算机数字媒体技术专业（2014-2018）
 
