@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "8"
+  - '8'
 
 before_install:
   - git config user.name "cwxyz007"
@@ -35,5 +35,5 @@ cache:
 
 env:
   global:
-    - TZ: Asia/Shanghai
-    - GitRepo: github.com/cwxyz007/cwxyz007.github.io.git
+    - TZ=Asia/Shanghai
+    - GitRepo=github.com/cwxyz007/cwxyz007.github.io.git
