@@ -73,3 +73,31 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: simple
+
+theme_config:
+  links:
+    Github:
+      link: https://github.com/cwxyz007
+      icon: github
+    Email:
+      link: mailto:x.li.gem@gmail.com
+      icon: envelope
+
+  # Google analytics
+  ga:
+    active: true
+    id: UA-101492756-1
+
+  # Baidu analytics
+  ba:
+    active: true
+    id: 044e5dc9f3bc0a3b3042d15a4bbd8cae
+
+  footer: |
+    <p> Powered by
+      <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+      and
+      <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+      , Made By
+      <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+    </p>
