@@ -14,7 +14,7 @@ Vue 3.0 系列之 Runtime Dom，对应代码版本 [vue-next](https://github.com
 - directives: v- 指令相关处理
 - modules: Element 属性对比，替换相关处理
 - index.ts: 挂载 Vue 到 Host 上，Host 有可能是 Document 有可能是 Hydration App
-- nodeOps.ts: 封装 Element 相关操作
+- nodeOps.ts: 封装 Element 相关操作，统一不同平台上的操作
 - patchProp.ts: 对比 Element 上的属性，执行替换操作
 
 <!-- more -->
