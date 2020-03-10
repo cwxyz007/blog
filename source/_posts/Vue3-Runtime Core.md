@@ -1,7 +1,7 @@
 ---
 title: Vue3 - Runtime Core
 date: 2020-03-09T10:42:19.967Z
-tags: [Vue Vue3]
+tags: [Vue, Vue3]
 # CC BY-NC 4.0
 license: CC BY-NC 4.0
 ---
