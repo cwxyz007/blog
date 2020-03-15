@@ -29,11 +29,11 @@ createApp(App).mount("#app");
 
 对应文件的一些说明
 
-- components:
-  - BaseTransition.ts:
-  - KeepAlive.ts:
-  - Portal.ts:
-  - Suspense.ts:
+- components: 原生组件
+  - BaseTransition.ts: HOC，Transition 组件，处理 transition 相关 hook
+  - KeepAlive.ts: HOC，Keep Alive 组件，添加 actived、deactived hook，缓存组件
+  - Portal.ts: 特殊组件，在 patch 的时候调用 Portal.process 函数
+  - Suspense.ts: 特殊组件，主要用于处理 setup 为异步函数的情况。在 patch 的时候做特殊处理
 - helpers: renderer 相关辅助函数
   - createSlots.ts: 创建 Slot
   - renderList.ts: 创建 列表 负责函数
