@@ -42,7 +42,7 @@ Vue 3.0 系列之 Reactivity，对应代码版本 [vue-next](https://github.com/
 
 ### ref.ts
 
-就像[目录结构](##目录结构)里面介绍的一样，主要把非 Reactive 对象转换成 Reactive 对象
+就像[目录结构](#目录结构)里面介绍的一样，主要把非 Reactive 对象转换成 Reactive 对象
 
 ## 总结
 

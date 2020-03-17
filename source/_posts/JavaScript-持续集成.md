@@ -38,7 +38,7 @@ node_js:
 
 ![Test](test1.png)
 
-就这样，持续集成就OK了，是不是很简单，然后点击 passing 图标，选择 Markdown 写到 readme 里面就可以在 GitHub 上看到了。
+就这样，持续集成就 OK 了，是不是很简单，然后点击 passing 图标，选择 Markdown 写到 readme 里面就可以在 GitHub 上看到了。
 
 ## 测试覆盖率
 
@@ -65,7 +65,10 @@ npm install coveralls --save-dev #安装 coveralls
 ![测试项目](testProject1.png)
 
 修改 `package.json` 里面的 `test` 脚本为
-`istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage` 
+
+```sh
+istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+```
 
 然后运行 `npm test` 命令，会提示一个错误，那个是因为没有在 `package.json' 里面添加 repository 地址，可以忽略。
 
