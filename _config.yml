@@ -47,7 +47,7 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ""
+  path: ''
   per_page: 10
   order_by: -date
 
@@ -100,3 +100,13 @@ theme_config:
       , Made By
       <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
     </p>
+
+  comment:
+    active: true
+    apiKey: 'AIzaSyBvtJJAzIKucsyjl7z_DDw43PL5rb0P4hc'
+    authDomain: 'jie8440676360.firebaseapp.com'
+    databaseURL: 'https://jie8440676360.firebaseio.com'
+    projectId: 'jie8440676360'
+    storageBucket: 'jie8440676360.appspot.com'
+    messagingSenderId: '1067882600320'
+    appId: '1:1067882600320:web:b0b5a354a45fdb0ed21365'
