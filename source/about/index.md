@@ -1,5 +1,5 @@
 ---
-title: 个人简历
+title: 我是谁
 date: 2019-1-15 23:51:10
 comments: false
 ---
@@ -38,7 +38,7 @@ Github: https://github.com/cwxyz007
 
 实习工作主要是前端页面的实现、适配，以及简单的后端逻辑实现。使用 `Rails` 框架，技术栈 `Ruby + Slim + Scss + CoffeeScript`
 
-### 青蛙创客(2018/07 - 至今)
+### 青蛙创客(2018/07 - 2020/03)
 
 > 编程驱动万物，点亮精彩创意 - [青蛙创客](http://www.frogmaker.cn/)
 
@@ -51,6 +51,10 @@ Github: https://github.com/cwxyz007
 前端项目：为了快速迭代，以及考虑开发的成本，使用 **微前端** 的开发模式。自研多个内部开发、发布工具。技术亮点：支付接入、组件式开发、权限管理、`mqtt`、`websocket`
 
 Scratch：Scratch-GUI (`React` 技术栈)、Scratch-Blocks、Scratch-vm 均有研究和二次开发
+
+### 光云科技(2020/03 - 至今)
+
+> 致力于成为电商领域里值得信任和依赖的合作伙伴，帮助商家获得更大的成功 - [光云科技](https://www.raycloud.com/)
 
 ---
 
