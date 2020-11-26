@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "hexo s --debug"
+    "dev": "hexo s --debug",
+    "build": "hexo g"
   },
   "hexo": {
     "version": "5.0.0"
