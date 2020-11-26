@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - 正则表达式</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">正则表达式</h1><p class="post-meta"><span class="meta date">2017-03-27</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><h2 id="简介">简介</h2>
+<blockquote>
+<p>又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法（英语：Regular Expression，在代码中常简写为regex、regexp或RE），是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="基本语法">基本语法</h2>
+<h3 id="选择">选择</h3>
+<p>| 竖直分隔符代表选择。例如 “gray|grey” 可以匹配 grey 或 gray</p>
+<h3 id="数量限定">数量限定</h3>
+<ul>
+<li><code>+</code>：加号代表前面的字符必须至少出现一次。（1次、或多次）。例如，“goo+gle” 可以匹配 google、gooogle、goooogle 等</li>
+<li><code>?</code>：问号代表前面的字符最多只可以出现一次。（0次、或1次）。例如，“colou?r” 可以匹配 color 或者 colour</li>
+<li><code>*</code>：星号代表前面的字符可以不出现，也可以出现一次或者多次。（0次、或1次、或多次）。例如，“0*42” 可以匹配 42、042、0042、00042 等</li>
+</ul>
+<h3 id="匹配">匹配</h3>
+<p>圆括号可以用来定义操作符的范围和优先度。例如，“gr(a|e)y” 等价于 “gray|grey”，“(grand)?father” 匹配 father 和 grandfather</p>
+<h2 id="表达式全集">表达式全集</h2>
+<blockquote>
+<p>详情查询：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F#.E8.A1.A8.E8.BE.BE.E5.BC.8F.E5.85.A8.E9.9B.86">表达式全集 - 适用于 Perl 或者 Python 编程语言</a></p>
+</blockquote>
+<h2 id="优先级">优先级</h2>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最高</td>
+<td><code>\</code></td>
+</tr>
+<tr>
+<td>高</td>
+<td><code>( )、(?: )、( ?= )、[ ]</code></td>
+</tr>
+<tr>
+<td>中</td>
+<td><code>*、+、?、&#123;n&#125;、&#123;n,&#125;、&#123;m,n&#125;</code></td>
+</tr>
+<tr>
+<td>低</td>
+<td><code>^、$、中介字符</code></td>
+</tr>
+<tr>
+<td>最低</td>
+<td><code>丨</code></td>
+</tr>
+</tbody>
+</table>
+<p>练习文本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">abcdefghijklmnopqrstuvwxyz<br><br>a bc def ghij klmno pqrstu vwxyz<br><br>0123456789<br><br>0 12 345 6789 0<br><br>这是一段汉字，也是一段中国字。而 且还 是隔开 的 汉字<br><br>_	_<br><br>?&gt;&lt;:&quot;&#123;&#125;!@#%$&amp;*()+-=&#x27;;/.,[]\&#x27;<br><br>? &gt;&lt; :&quot;&#123; &#125;!@# %$&amp;*( )+-=&#x27; ;/.,[ ]\&#x27;<br><br>192.168.12.1<br><br>249.249.240.195<br><br>333.246.244.244<br><br>255.255.255.255<br><br>1.1.1.1<br><br>1.2.3.2555<br></code></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-comment">// 匹配 IP 地址</span><br>\b((<span class="hljs-number">1</span>\d&#123;<span class="hljs-number">2</span>&#125;|<span class="hljs-number">2</span>[<span class="hljs-number">0</span><span class="hljs-number">-4</span>]\d|<span class="hljs-number">25</span>[<span class="hljs-number">0</span><span class="hljs-number">-5</span>]|\d&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>&#125;)\.)&#123;<span class="hljs-number">3</span>&#125;(<span class="hljs-number">1</span>\d&#123;<span class="hljs-number">2</span>&#125;|<span class="hljs-number">2</span>[<span class="hljs-number">0</span><span class="hljs-number">-4</span>]\d|<span class="hljs-number">25</span>[<span class="hljs-number">0</span><span class="hljs-number">-5</span>]|\d&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>&#125;)\b<br></code></pre></td></tr></table></figure>
+<p>结果图：</p>
+<p><img src="test.png" alt="匹配结果"></p>
+<h2 id="参考">参考</h2>
+<ul>
+<li>正则表达式 - 维基百科，自由的百科全：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">https://zh.wikipedia.org/wiki/正则表达式</a></li>
+</ul>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/JavaScript/"><i class="fa fa-tag"></i>JavaScript</a></li><li><a href="/tags/Regex/"><i class="fa fa-tag"></i>Regex</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - Vue3 - Runtime Dom</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">Vue3 - Runtime Dom</h1><p class="post-meta"><span class="meta date">2020-03-05</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><p>Vue 3.0 系列之 Runtime Dom，对应代码版本 <a target="_blank" rel="noopener" href="https://github.com/vuejs/vue-next/tree/fb4856b36375fcf3eecaf89f260b272052a0b432">vue-next</a></p>
+<h2 id="目录结构">目录结构</h2>
+<ul>
+<li>components: 两个 transition 相关的 Vue 组件</li>
+<li>directives: v- 指令相关处理</li>
+<li>modules: Element 属性对比，替换相关处理</li>
+<li>index.ts: 挂载 Vue 到 Host 上，Host 有可能是 Document 有可能是 Hydration App</li>
+<li>nodeOps.ts: 封装 Element 相关操作，统一不同平台上的操作</li>
+<li>patchProp.ts: 对比 Element 上的属性，执行替换操作</li>
+</ul>
+<a id="more"></a>
+<h3 id="components">components</h3>
+<p><strong>Transition.ts</strong> 组件主要处理 Element 的 class 在适当的时候添加以及删除，实际实现是 runtime-core 中的 <strong>BaseTransition</strong> 组件</p>
+<p><strong>TransitionGroup.ts</strong> 组件主要给子组件添加 transition hook，以及子组件在添加/删除/移动的时候，添加 transition class</p>
+<h3 id="directives">directives</h3>
+<p><strong>vModel.ts</strong> 主要用于给 <code>select,textarea,input</code> 添加各种事件，例如 <code>change, input</code> 等，再根据 modifiers 执行对应的功能代码</p>
+<p><strong>vOn.ts</strong> 中 <strong>withKeys</strong> 是为了兼容 2.x 的语法，<strong>withModifiers</strong> 则是 3.0 的新版本，主要处理 modifiers</p>
+<p><strong>vShow.ts</strong> 中的代码很少，也很简单，就是处理 el.style.display，还考虑到了 transition，原始 display 值保存在 <code>el._vod</code>(Vue original display)</p>
+<h3 id="modules">modules</h3>
+<p>modules 文件夹是为处理 Element 原生属性</p>
+<p><strong>attrs.ts</strong> 分别处理了 svg 和 非 svg 的 attr 设置，特殊处理了 boolean 值，因为 Vue 会把所有非字符串 attr 的值转换成字符串，所以 boolean 值需要特殊处理</p>
+<p><strong>class.ts</strong> 处理 className，一样分 svg 和 非 svg，特别注意 transition 相关的 className，transition 相关 classes 保存到 <code>el._vtc</code>(vue transition classes) 中的</p>
+<p><strong>events.ts</strong> 在原生回调函数上 wrapper 了一层 invoker，invoker 只要在监听参数不变的情况下，实现重用</p>
+<p><strong>prop.ts</strong> 处理 element 上的 props，特殊处理了 <code>InnerHTML,textContent</code>，progress 的 <code>value</code> 和 boolean 值的 prop</p>
+<p><strong>style.ts</strong> 处理了 css 变量，自动添加前缀，特殊处理了 <code>!important</code> 语法</p>
+<h3 id="nodeOps-ts">nodeOps.ts</h3>
+<p>本文件主要封装了 Element 的常用函数，主要为了分开 svg 和非 svg 的相关操作，统一 api</p>
+<h3 id="patchProp-ts">patchProp.ts</h3>
+<p>本文件主要是统一一个 api 来管理 patch 操作，特殊处理了 <code>:true-value, :false-value</code> 语法，保存到 <code>el._trueValue, el._falseValue</code> 中</p>
+<h2 id="总结">总结</h2>
+<p>Runtime Dom 主要就是为了执行 dom diff 之后的 patch 操作，代码看起来相对比较简单，另外添加了两个原生组件 <code>Transition</code> 和 <code>TransitionGroup</code></p>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/Vue/"><i class="fa fa-tag"></i>Vue</a></li><li><a href="/tags/Vue3/"><i class="fa fa-tag"></i>Vue3</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>

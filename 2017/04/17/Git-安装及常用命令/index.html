@@ -1,0 +1,79 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - Git 安装及常用命令</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">Git 安装及常用命令</h1><p class="post-meta"><span class="meta date">2017-04-17</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><blockquote>
+<p>git 是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于 2005 年以 GPL 发布。最初目的是为更好地管理 Linux 内核开发而设计。</p>
+</blockquote>
+<blockquote>
+<p>git 是用于 Linux 内核开发的版本控制工具。与 CVS、Subversion 一类的集中式版本控制工具不同，它采用了分布式版本库的作法，不需要服务器端软件，就可以运作版本控制，使得源代码的发布和交流极其方便。git 的速度很快，这对于诸如 Linux 内核这样的大项目来说自然很重要。git 最为出色的是它的合并追踪（merge tracing）能力。</p>
+</blockquote>
+<h2 id="安装环境">安装环境</h2>
+<p>linux 环境下安装 Git</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> install git<br></code></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="基础配置">基础配置</h2>
+<p><strong>配置文件</strong></p>
+<p>三种配置文件：</p>
+<ol>
+<li><code>/etc/gitconfig</code> 文件：包含系统上每一个用户及他们仓库的通用配置。如果使用带有 <code>--system</code> 选项的 <code>git config</code> 时，它会从此文件读写配置变量。</li>
+<li><code>~/.gitconfig</code> 或 <code>~/.config/git/config</code> 文件：只针对当前用户。可以传递 <code>--global</code> 选项让 Git 读写此文件。</li>
+<li>当前使用仓库的 Git 目录中的 <code>config</code> 文件（就是 <code>.git/config</code>）：针对该仓库。</li>
+</ol>
+<p>每一个级别覆盖上一个级别的配置：3 中的配置覆盖 2 中的配置，2 中的配置覆盖 1中的配置。</p>
+<p><strong>配置用户信息</strong></p>
+<p>根据需求，可以配置不同种类的配置，例如下面的配置适用于所有仓库。若需要其它配置，可以在设置相应仓库下的配置文件</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git<span class="hljs-built_in"> config </span>--global user.name <span class="hljs-string">&quot;John Doe&quot;</span> #你的用户名<br>git<span class="hljs-built_in"> config </span>--global user.email johndoe@example.com #你的邮箱地址<br></code></pre></td></tr></table></figure>
+<p><strong>默认编辑工具</strong></p>
+<p>vim 是 linux 下的一款文本编辑软件</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git<span class="hljs-built_in"> config </span>--global core.editor vim<br></code></pre></td></tr></table></figure>
+<p><strong>检查配置信息</strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git<span class="hljs-built_in"> config </span>--list #检查所有配置<br>git<span class="hljs-built_in"> config </span>user.name #检查 user.name 这一项配置<br></code></pre></td></tr></table></figure>
+<p><strong>获取命令帮助</strong></p>
+<p>三种获取帮助的方式</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git help<span class="hljs-built_in"> config </span>#获取<span class="hljs-built_in"> config </span>的命令帮助<br>git<span class="hljs-built_in"> config </span>--help #获取<span class="hljs-built_in"> config </span>的命令帮助<br>man git<span class="hljs-built_in"> config </span> #获取<span class="hljs-built_in"> config </span>的命令帮助<br></code></pre></td></tr></table></figure>
+<h2 id="仓库操作">仓库操作</h2>
+<p><strong>初始化仓库</strong></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git init</span><br></code></pre></td></tr></table></figure>
+<p><strong>添加文件</strong></p>
+<p>这里的 <code>add</code> 表示添加到下一次提交，而不是添加到项目里面</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add <span class="hljs-string">&quot;*.c&quot;</span> <span class="hljs-comment">#添加所有 .c 文件</span><br></code></pre></td></tr></table></figure>
+<p><strong>提交</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&#x27;create github&#x27;</span> <span class="hljs-comment">#提交暂存区并附上说明：create github</span><br>git commit -a -m <span class="hljs-string">&#x27;creat github&#x27;</span> <span class="hljs-comment">#直接提交所以已跟踪的文件并附上说明</span><br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93">粗略理解 Git 工作过程</a></p>
+<p><strong>查看状态</strong></p>
+<p>查看每个跟踪的文件的状态</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git status</span> <br></code></pre></td></tr></table></figure>
+<p><strong>忽略文件</strong></p>
+<p>在工作目录创建一个文件名为 <code>.gitigrone</code>，然后列出忽略列表。</p>
+<p>忽略列表可以使用 glob 模式（一个简化的正则表达式）。</p>
+<p><code>.gitigrone</code> 模板：<a target="_blank" rel="noopener" href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></p>
+<p><strong>查看修改</strong></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git diff</span><br></code></pre></td></tr></table></figure>
+<p><strong>移除文件</strong></p>
+<p><code>rm</code> 后面的参数可以使用 <code>glob</code> 模式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git rm README <span class="hljs-comment">#移除 README 文件，会删除相应的文件</span><br>git rm --cached README <span class="hljs-comment">#仅移除 Git 对 README 文件的追踪，不会删除文件 </span><br></code></pre></td></tr></table></figure>
+<p><strong>移动文件</strong></p>
+<p><code>git mv</code> 命令相当与执行一下三条命令：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">mv</span> <span class="hljs-string">README readme</span><br><span class="hljs-attr">git</span> <span class="hljs-string">rm README</span><br><span class="hljs-attr">git</span> <span class="hljs-string">add readme</span><br></code></pre></td></tr></table></figure>
+<p>所以 <code>mv</code> 命令相当于重命名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git mv README readme <span class="hljs-comment">#将 README 更名为 readme</span><br></code></pre></td></tr></table></figure>
+<p><strong>查看提交历史</strong></p>
+<p><code>git log</code> 参数较多，详细研究点击 <a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2"><code>git log</code> 详情</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">log</span> <span class="hljs-comment">#查看所有记录</span><br>git <span class="hljs-built_in">log</span> -p -2 <span class="hljs-comment">#查看最近的两次提交记录，以及详细信息</span><br></code></pre></td></tr></table></figure>
+<p><strong>撤销操作</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">git <span class="hljs-keyword">commit</span> <span class="hljs-comment">--amend </span><br><span class="hljs-comment">#在你上次提交之后，追加提交，只算一次提交，即这一次提交会覆盖上一次提交</span><br></code></pre></td></tr></table></figure>
+<p>取消暂存的文件</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">git <span class="hljs-keyword">reset</span> <span class="hljs-keyword">HEAD</span> README <span class="hljs-comment">#取消 README 文件的暂存</span><br></code></pre></td></tr></table></figure>
+<p>撤消对文件的修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout --README <span class="hljs-comment">#撤销对 README 文件的修改，回到上一次提交的状态</span><br></code></pre></td></tr></table></figure>
+<h2 id="工具">工具</h2>
+<ul>
+<li>Git 教学：<a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">https://git-scm.com/book/zh/v2</a></li>
+<li>Git 指令参考：<a target="_blank" rel="noopener" href="https://git-scm.com/docs">https://git-scm.com/docs</a></li>
+<li>Liunx 下的图形界面 Git：<a target="_blank" rel="noopener" href="https://www.gitkraken.com/">https://www.gitkraken.com/</a></li>
+</ul>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/Git/"><i class="fa fa-tag"></i>Git</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>

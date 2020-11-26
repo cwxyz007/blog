@@ -1,0 +1,1 @@
+.simple-pagination{overflow:hidden}.simple-pagination ul{display:flex;justify-content:center;list-style:none}.simple-pagination ul li{padding-right:10px}.simple-pagination ul li a{padding:10px 20px}.simple-pagination ul li a::before,.simple-pagination ul li a::after{content:none}

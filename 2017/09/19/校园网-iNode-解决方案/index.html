@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - Linux 下 iNode 解决方案</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">Linux 下 iNode 解决方案</h1><p class="post-meta"><span class="meta date">2017-09-19</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><p>由于学校的 iNode 客户端 Linux 版太古老了，安装起来遇到各种各样的问题。所以就在<br>
+github 搜了一搜，看有没有什么开源的 iNode 的替代品。结果就让我找到了！</p>
+<p>开源的 iNode 替代品 <a target="_blank" rel="noopener" href="https://github.com/liuqun/njit8021xclient/blob/master/ReadMe.html">njit8021xclient</a>。</p>
+<h2 id="安装">安装</h2>
+<p>按照 <a target="_blank" rel="noopener" href="https://github.com/liuqun/njit8021xclient/blob/master/Install.html">install.html</a> 编译安装。</p>
+<p>编译的时候注意<strong>第一次</strong>需要<strong>先</strong>在 <code>njit-clinet</code> 项目的根目录下运行命令</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">autoreconf --install<br></code></pre></td></tr></table></figure>
+<p>然后安装说明编译安装就行了。</p>
+<p>不同的 Linux 版本 <code>autoreconf</code> 可能不同，可自行搜索安装。</p>
+<h2 id="运行">运行</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">iwconfig <span class="hljs-comment">#查看网卡</span><br>sudo njit-client 用户名 密码 网卡 <span class="hljs-comment">#可在后面添加 &amp; 符号，使其后台运行。</span><br>sudo njit-client 用户名 密码 网卡 &amp;<br></code></pre></td></tr></table></figure>
+<p>网卡需要输入你电脑连上的那个网卡。有时候是<strong>无线</strong>的网卡，有时候是<strong>有线</strong>的网卡。</p>
+<h2 id="其他相关">其他相关</h2>
+<h3 id="自动获取-IP">自动获取 IP</h3>
+<p>可能还需要设置自动获取 ip，设置方式：<br>
+打开网络连接设置。找到设置面板。然后在 IPv4 设置中选择 DHCP 模式。</p>
+<p>如图：</p>
+<p><img src="dhcp.png" alt="设置网卡"></p>
+<h3 id="修改-dns">修改 dns</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#临时修改 dns</span><br>sudo vim /etc/resolv.conf <span class="hljs-comment">#修改 nameserver 后面的地址就好了。</span><br></code></pre></td></tr></table></figure>
+<p>也可以直接在设置面板里面设置 dns，设置如图：</p>
+<p><img src="dns.png" alt="设置 dns"></p>
+<p>在 Additional DNS servers 后面填上 dns 地址即可。我填的的是阿里提供的 DNS 地址。</p>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/Linux/"><i class="fa fa-tag"></i>Linux</a></li><li><a href="/tags/iNode/"><i class="fa fa-tag"></i>iNode</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>

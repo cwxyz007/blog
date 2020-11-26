@@ -1,0 +1,58 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - Hexo 入门</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">Hexo 入门</h1><p class="post-meta"><span class="meta date">2017-10-25</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><p>就把这篇文章算做自己的第一篇技术文章吧！以后这个博客就拿来记录自己的一些技术心得。</p>
+<p>官方文档已经很详细了，为什么我还要写一遍呢？记录之，巩固之</p>
+<h2 id="安装之前的准备">安装之前的准备</h2>
+<p>安装 <a target="_blank" rel="noopener" href="http://nodejs.cn/">Nodejs</a> 和 <a target="_blank" rel="noopener" href="https://www.npmjs.com/">npm</a>，推荐使用 <a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">nvm</a> 来安装。既然都推荐使用 <a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">nvm</a> 了，那就再推荐一下包管理工具 <a target="_blank" rel="noopener" href="https://yarnpkg.com/zh-Hans/">Yarn</a></p>
+<a id="more"></a>
+<h2 id="安装-Hexo">安装 Hexo</h2>
+<p>如果上面安装好了，那现在就特别简单了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-cli -g <span class="hljs-comment">#全局安装</span><br>npm isntall hexo-cli --save <span class="hljs-comment">#当前项目安装</span><br></code></pre></td></tr></table></figure>
+<p>以上二选一即可，当然用 <a target="_blank" rel="noopener" href="https://yarnpkg.com/zh-Hans/">Yarn</a> 安装也是可以的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">yarn global add hexo-cli <span class="hljs-comment">#全局安装</span><br>yarn add hexo-cli <span class="hljs-comment">#当前项目安装</span><br></code></pre></td></tr></table></figure>
+<h2 id="初始化">初始化</h2>
+<p>安装完成之后，那就是找个文件夹来初始化博客项目了。随便找个文件夹，运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init<br>npm install <span class="hljs-comment"># 或者 yarn</span><br></code></pre></td></tr></table></figure>
+<p>然后，就好了～</p>
+<blockquote>
+<p>Tips：这里需要全局安装，若不是全局安装，则需要在安装 Hexo 的那个目录下的 config.json 里面的配置相应的命令然后使用 npm 或者 yarn 运行</p>
+</blockquote>
+<h2 id="配置">配置</h2>
+<p>配置文件为 <code>_config.yml</code> ，配置文件的详细说明 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration.html">Hexo 配置</a></p>
+<p>这里找到配置文件，就可以为所欲为啦！自己去魔改吧。这里还不能说是魔改，毕竟只是一些基本的配置！</p>
+<h2 id="写作">写作</h2>
+<p>既然是博客，那肯定需要有写作的地方才行啊，所以要怎么写一篇新文章呢？很简单，在博客的目录运行如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&#x27;新文章&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>就这样，一篇新文章就这样诞生了，当然还得需要你去充实它～</p>
+<blockquote>
+<p>Tips：文章使用 <a target="_blank" rel="noopener" href="https://github.com/Melo618/Simple-Markdown-Guide">Markdown</a> 语法来排版，特别好用，不会就赶紧看看吧。十分钟即可入门，两小时即可熟练使用。</p>
+</blockquote>
+<h2 id="测试">测试</h2>
+<p>写好了文章，那要怎么看效果呢，为怎么知道我写了之后的排版到底是怎么样的呢？简单哟～，一句命令搞定</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo s<br></code></pre></td></tr></table></figure>
+<p>然后在浏览器里面打开 <a target="_blank" rel="noopener" href="http://localhost:4000">http://localhost:4000</a> ，就可以预览你的博客啦～</p>
+<h2 id="部署到-GitHub-Page">部署到 GitHub Page</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 提供了一个 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Page</a> 页面，咱们就用这个页面来存放自己的博客吧，当然也可以部署到自己的服务器上～，这里就只介绍怎么部署到 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Page</a> 上～</p>
+<h3 id="创建-GitHub-Page-仓库">创建 GitHub Page 仓库</h3>
+<p>创建一个仓库名为 <code>username.github.io</code> 其中 <code>username</code> 就是你的 GitHub 的用户名</p>
+<h3 id="添加-hexo-deployer-git-插件">添加 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a> 插件</h3>
+<p>这是一个快速部署到 GitHub 的插件，安装也特别简单，一句命令搞定</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git<br></code></pre></td></tr></table></figure>
+<h3 id="配置-deploy">配置 deploy</h3>
+<p>然后在之前介绍的配置文件中配置 deploy</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:username/username.github.io.git</span> <span class="hljs-comment"># 把 username 替换成你自己用户名</span><br></code></pre></td></tr></table></figure>
+<h3 id="部署">部署</h3>
+<p>万事俱备，只欠东风～</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy <span class="hljs-comment"># 或者 hexo d</span><br></code></pre></td></tr></table></figure>
+<p>之后，应该会提示你登陆 GitHub ，登陆之后就会自动部署到你的 GitHub Page ，然后你可以通过访问 <a target="_blank" rel="noopener" href="http://username.github.io">username.github.io</a> 来访问你自己的博客</p>
+<h2 id="主题">主题</h2>
+<p>到了这里，你已经可是使用 Hexo 来写博客了，但是呢！默认的主题不好看，对不起，我是外貌协会的，怎么办～没关系，配置文件里面不是有 <code>theme</code> 这个配置项吗，那就说明，主题是可以更改的！</p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo 主题</a> 这里有很多主题，你只需要下在下来放到 <code>themes</code>文件夹里面，然后把配置文件里面的 <code>theme</code> 改成相应的主题名字即可，当你再次测试你的博客的时候，你会发现你的主题已经改变了。</p>
+<h2 id="更多">更多</h2>
+<p>到这个时候，估计你应该会有很多问题了，但是呢，你的那些问题都不是问题，你可以查阅 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo 文档</a>，以及相关主题的文档来解决你的问题，当然也欢迎在下方留言，我们可以一起交流，讨论～</p>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/Blog/"><i class="fa fa-tag"></i>Blog</a></li><li><a href="/tags/Hexo/"><i class="fa fa-tag"></i>Hexo</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - 树莓派之 Docker</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">树莓派之 Docker</h1><p class="post-meta"><span class="meta date">2020-05-31</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><p>一直都想部署一个局域网服务，保存自己下载的电影、图片等等。空闲的时候，还能挂着下载东西。</p>
+<p>一直没空，刚好这个周末有空，就尝试在树莓派 4 上面部署 Docker 服务。配合路由器修改 hosts 用着还不错。</p>
+<p>所需硬件：</p>
+<ul>
+<li>树莓派 4B 1GB x1</li>
+<li>斐讯 K2 路由器 x1</li>
+<li>一台电脑（笔记本/台式机都行）</li>
+</ul>
+<a id="more"></a>
+<h2 id="路由器刷固件">路由器刷固件</h2>
+<p>路由器刷 Padavan 固件(默认用户名/密码是: admin/admin)，可以刷其它固件，只要又绑定 mac 地址功能，和自定义 hosts 功能即可。</p>
+<p><img src="2020-05-31T211438.png" alt="2020-05-31T211438"></p>
+<p>树莓派的地址是 192.168.123.26, 记住后面有用</p>
+<p><img src="2020-05-31T211735.png" alt="2020-05-31T211735"></p>
+<p>在「内部网络 -&gt; DHCP 配置」中绑定 MAC 地址，以及设置 hosts，到这里，路由器的配置就结束啦。重头戏还是在树莓派里面。</p>
+<h2 id="树莓派-Docker-服务">树莓派 Docker 服务</h2>
+<p>树莓派刷入官方固件</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://www.raspberrypi.org/downloads/raspbian/">https://www.raspberrypi.org/downloads/raspbian/</a></p>
+<p>建议下载 recommend 版本，有 GUI 好用一点点。我就用联了个网，后面基本也没用过 GUI :)</p>
+<p>安装好之后，联入路由器，开启 ssh 登陆，然后就可以在电脑上用 ssh 工具登录树莓派。</p>
+<p><img src="2020-05-31T212029.png" alt="2020-05-31T212029"></p>
+<p>准备工作，由于在国内，安装软件，以及拉取镜像等操作都可能因为网络原因失败，所以第一步就是替换软件源地址</p>
+<ol>
+<li>替换树莓派 Debian 软件源，替换成清华的源地址</li>
+</ol>
+<p>修改方式参考：<a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/raspbian/">https://mirror.tuna.tsinghua.edu.cn/help/raspbian/</a></p>
+<ol start="2">
+<li>安装 Docker</li>
+</ol>
+<p>使用官网的安装脚本：<a target="_blank" rel="noopener" href="https://github.com/docker/docker-install">https://github.com/docker/docker-install</a></p>
+<p>国内可用阿里云的镜像地址来安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">curl -fsSL https://get.docker.com -o get-docker.sh<br>sh get-docker.sh --mirror Aliyun<br></code></pre></td></tr></table></figure>
+<p>安装完之后，再安装 Docker-Compose：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">sudo apt update<br>sudo apt install docker-compose<br></code></pre></td></tr></table></figure>
+<p>安装完之后，记得修改 Docker Hub 的镜像地址：</p>
+<p>修改成中科大的地址，修改方式：<a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/help/dockerhub.html">https://mirrors.ustc.edu.cn/help/dockerhub.html</a></p>
+<p>到此，Docker 环境就安装好啦。</p>
+<h2 id="部署-Docker-服务">部署 Docker 服务</h2>
+<p>推荐使用 Docker-compose 来部署服务，因为 docker-compose 可以把配置写到文件中，不用每次启动都输入一遍配置。</p>
+<p>可选在树莓派上安装 Nginx 反向代理服务，如果不安装在树莓派上，可以在 Docker 中运行 Nginx，只不过，因此 Docker 中其它服务都必须在同一 network 上。</p>
+<p>Docker 相关配置参考：<a target="_blank" rel="noopener" href="https://github.com/cwxyz007/Dockerfiles">https://github.com/cwxyz007/Dockerfiles</a></p>
+<h2 id="最终效果">最终效果</h2>
+<p>以下服务只能在局域网里面访问，而且因为 Nginx 反向代理加上路由器 hosts 的原因，需要正确的域名才能访问到对应的服务。注意需要用路由器默认 dns，否则 hosts 不会生效。</p>
+<p>看看部署好的服务吧：</p>
+<p>netdata 监控服务</p>
+<p><img src="2020-05-31T214154.png" alt="2020-05-31T214154"></p>
+<p>aria2 下载服务</p>
+<p><img src="2020-05-31T214257.png" alt="2020-05-31T214257"></p>
+<p>百度网盘服务</p>
+<p><img src="2020-05-31T220348.png" alt="2020-05-31T220348"></p>
+<p>文件浏览服务</p>
+<p><img src="2020-05-31T215710.png" alt="2020-05-31T215710"></p>
+<p>到此就可以愉快的玩耍啦</p>
+<p>Docker 配置和操作请参考：<a target="_blank" rel="noopener" href="https://docs.docker.com/reference/">https://docs.docker.com/reference/</a></p>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/Docker/"><i class="fa fa-tag"></i>Docker</a></li><li><a href="/tags/Linux/"><i class="fa fa-tag"></i>Linux</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>

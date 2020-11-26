@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - Vue3 - Reactivity</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">Vue3 - Reactivity</h1><p class="post-meta"><span class="meta date">2020-03-05</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><p>Vue 3.0 系列之 Reactivity，对应代码版本 <a target="_blank" rel="noopener" href="https://github.com/vuejs/vue-next/tree/fb4856b36375fcf3eecaf89f260b272052a0b432">vue-next</a></p>
+<h2 id="目录结构">目录结构</h2>
+<ul>
+<li>baseHandlers.ts: Proxy 的基础 handler</li>
+<li>collectionHandlers.ts: Set,Map,WeakMap,WeakSet 的 Proxy handler</li>
+<li>computed.ts: getter 负责 track 响应式变量，setter 负责 trigger 响应式</li>
+<li>effect.ts: 负责 追踪、分发 响应式变量的各种更改，包括增加、删除、设置、清除</li>
+<li>index.ts: 入口，负责 export 接口</li>
+<li>lock.ts: 全局锁</li>
+<li>operations.ts: 定义 Proxy 操作常量</li>
+<li>reactive.ts: 监听对象，添加响应式函数</li>
+<li>ref.ts: 主要把非 Reactive 对象转换成 Reactive 对象，以及 wrap 和 unwrap 一层 get/set</li>
+</ul>
+<a id="more"></a>
+<p>通过浏览各个文件，可以发现 operations.ts 没有依赖。然后是 effect.ts，只依赖 reactivity 中的 operation.ts ，那么就可以先从这两个文件开始看，然后再找依赖最少的文件，这样源码读起来，就会相对容易一点。</p>
+<h3 id="baseHandlers-ts">baseHandlers.ts</h3>
+<p>主要创建 <code>mutableHandlers, readonlyHandlers, shallowReactiveHandlers, shallowReadonlyHandlers</code> 四种 ProxyHandler</p>
+<h3 id="collectionHandlers-ts">collectionHandlers.ts</h3>
+<p>主要是在 <code>get, size, has, add, set, delete, clear, forEach</code> 的时候添加 track 和 trigger 使其具有响应式</p>
+<h3 id="computed-ts">computed.ts</h3>
+<p>功能不多，就是在变量的 getter 里面 添加 track，setter 里面 trigger 对应的 reactive</p>
+<h3 id="reactive-ts">reactive.ts</h3>
+<p>主要函数 <code>createReactiveObject</code>，用 Proxy 代理 target，分别存在 toProxy 和 toRaw 里面</p>
+<h3 id="ref-ts">ref.ts</h3>
+<p>就像<a href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">目录结构</a>里面介绍的一样，主要把非 Reactive 对象转换成 Reactive 对象</p>
+<h2 id="总结">总结</h2>
+<p>Reactivity 主要是负责给变量添加相应式，给 Vue 的 mutable 打下基础</p>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/Vue/"><i class="fa fa-tag"></i>Vue</a></li><li><a href="/tags/Vue3/"><i class="fa fa-tag"></i>Vue3</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>

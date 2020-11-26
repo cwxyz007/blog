@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta name="description" content="web 前端开发"/><meta name="author" content="Fantasy"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta http-equiv="XUA_Compatible" content="IE=edge"/><meta name="sw" content="true"/><meta name="ga" content="UA-101492756-1"/><meta name="ba" content="044e5dc9f3bc0a3b3042d15a4bbd8cae"/><link rel="icon" href="/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://unpkg.com/firement@0.0.5/dist/style.css"/><link rel="stylesheet" href="/css/layout.css"/><title>幻想❤乡 - JavaScript 持续集成</title><meta name="generator" content="Hexo 5.0.0"></head><body><nav class="simple-layout-nav"><div class="simple-navbar"><div class="avatar-box"><a class="avatar-img" href="/"><img src="/imgs/avatar.jpg" alt="" srcset=""/></a><a class="info" href="/"><h3 class="author">Fantasy</h3><small class="subtitle">累了，就来这里歇歇</small></a></div><div class="menu"><span class="home"><a href="/"><i class="fa fa-home"></i>主页</a></span><span class="archives"><a href="/archives"><i class="fa fa-archive"></i>归档</a></span><span class="tags"><a href="/tags"><i class="fa fa-tag"></i>标签</a></span></div><div class="links"><span class="item"><a href="https://github.com/cwxyz007" target="_blank" rel="noopener"><i class="fa fa-github"></i><span>Github</span></a></span><span class="item"><a href="mailto:x.li.gem@gmail.com" target="_blank" rel="noopener"><i class="fa fa-envelope"></i><span>Email</span></a></span></div></div></nav><div class="simple-layout-content"><div class="simple-post"><h1 class="title">JavaScript 持续集成</h1><p class="post-meta"><span class="meta date">2017-09-29</span><span class="meta license"><a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></p><div class="markdown-content" id="post-content"><p>这篇文章的目标就是在 GitHub 上显示如下图标。当然不是简单的显示两张图片，而是显示当前项目的一些状态。</p>
+<img src="/2017/09/29/JavaScript-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/icon.png" class="">
+<p>持续集成官网： <a target="_blank" rel="noopener" href="https://travis-ci.org/">Travis-ci</a><br>
+测试覆盖率官网：<a target="_blank" rel="noopener" href="https://coveralls.io/">COVERALLS</a></p>
+<a id="more"></a>
+<p><img src="build.png" alt="Build 状态"></p>
+<p><img src="test.png" alt="测试状态"></p>
+<h2 id="持续集成">持续集成</h2>
+<p>如果项目中没有测试，那么就不需要包含测试覆盖率这一块。</p>
+<p>首先创建一个简单的项目</p>
+<p><img src="project.png" alt="项目"></p>
+<p>那么第一步，当然是选择跟着<a target="_blank" rel="noopener" href="https://docs.travis-ci.com/user/languages/javascript-with-nodejs/">官方文档</a>走啦，先创建 <code>.travis.yml</code> 文件，查看 <code>node</code> 版本 <code>node -v</code>。然后填进去，我的是 8.5.0，所以我的文件是这样的：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">language:</span> <span class="hljs-string">node_js</span><br><span class="hljs-attr">node_js:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;8&quot;</span><br></code></pre></td></tr></table></figure>
+<p>然后 <code>git push</code> 到 GitHub ，然后刷新 Travis CI 的页面：</p>
+<p><img src="test1.png" alt="Test"></p>
+<p>就这样，持续集成就 OK 了，是不是很简单，然后点击 passing 图标，选择 Markdown 写到 readme 里面就可以在 GitHub 上看到了。</p>
+<h2 id="测试覆盖率">测试覆盖率</h2>
+<p>同样的，跟着<a target="_blank" rel="noopener" href="https://coveralls.zendesk.com/hc/en-us/articles/201769715-Javascript-Node">官方文档</a>上的第一个 <a target="_blank" rel="noopener" href="https://github.com/nickmerwin/node-coveralls">node-coveralls</a> 走。项目还是上面那个测试项目。</p>
+<p>测试项目的目录：</p>
+<p><img src="testProject.png" alt="测试项目"></p>
+<p>在 <a target="_blank" rel="noopener" href="https://github.com/nickmerwin/node-coveralls">node-coveralls</a> 里面有很多钟方式，我选择 <a target="_blank" rel="noopener" href="https://github.com/gotwarlost/istanbul">Istanbul</a> + <a target="_blank" rel="noopener" href="https://github.com/mochajs/mocha">mocha</a>。</p>
+<p>那么，第一步，当然是安装 <a target="_blank" rel="noopener" href="https://github.com/gotwarlost/istanbul">Istanbul</a> + <a target="_blank" rel="noopener" href="https://github.com/mochajs/mocha">mocha</a> 啦，当然还要安装 <a target="_blank" rel="noopener" href="https://coveralls.io/">coveralls</a></p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> mocha --save-dev <span class="hljs-comment">#安装 mohca</span><br>npm <span class="hljs-keyword">install</span> istanbul --save-dev <span class="hljs-comment">#安装 istanbul</span><br>npm <span class="hljs-keyword">install</span> coveralls --save-dev <span class="hljs-comment">#安装 coveralls</span><br></code></pre></td></tr></table></figure>
+<p>为了不把 node_module 上传到 GitHub ，所以还需要创建 `.gitignore’ ，在里面添加 node_module 文件夹。</p>
+<p>然后写测试，测试为：</p>
+<p><img src="testProject1.png" alt="测试项目"></p>
+<p>修改 <code>package.json</code> 里面的 <code>test</code> 脚本为</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec &amp;&amp; cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js &amp;&amp; rm -rf ./coverage<br></code></pre></td></tr></table></figure>
+<p>然后运行 <code>npm test</code> 命令，会提示一个错误，那个是因为没有在 `package.json’ 里面添加 repository 地址，可以忽略。</p>
+<p><img src="testResult.png" alt="测试结果"></p>
+<p>到这一步，就可以把项目 push 到 GitHub 上去了。然后刷新在 <a target="_blank" rel="noopener" href="https://coveralls.io/">COVERALLS</a> 上的项目的网页。</p>
+<p><img src="cover.png" alt="测试覆盖率"></p>
+<p>就可以看到成功了！然后点击 EMBED 图标，选择 Markdown 复制到 readme 里面，就可以显示在 GitHub 上了。</p>
+<p>关于 <a target="_blank" rel="noopener" href="https://docs.travis-ci.com/user/languages/javascript-with-nodejs/">Travis CI</a> 和 <a target="_blank" rel="noopener" href="https://coveralls.zendesk.com/hc/en-us/articles/201769715-Javascript-Node">COVERALLS</a> 的具体的配置。请参考相应的官网的说明。</p>
+<h2 id="项目地址">项目地址</h2>
+<p>本篇文章的项目的 GitHub 地址 ：<a target="_blank" rel="noopener" href="https://github.com/cwxyz007/TravisTest">Travis Test</a></p>
+<p>到这里还不赶紧去 GitHub 上配置一波～。<br>
+如果本篇文章对你有帮助，为什么不点一波喜欢在走呢～</p>
+</div><hr class="post-end"/><div class="post-footer"><div class="post-license">版权声明：本文使用 <a alt="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a> 协议</div><div class="partial-simple-tags"><ul><li><a href="/tags/JavaScript/"><i class="fa fa-tag"></i>JavaScript</a></li><li><a href="/tags/Coveralls/"><i class="fa fa-tag"></i>Coveralls</a></li><li><a href="/tags/Travis-CI/"><i class="fa fa-tag"></i>Travis CI</a></li></ul></div></div><div id="post-comment"></div></div></div><div id="post-nav"></div><div class="simple-footer"><p> Powered by
+  <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+  and
+  <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+  , Made By
+  <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+</p>
+</div><script src="/js/index.js"></script></body></html>
